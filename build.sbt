@@ -32,8 +32,8 @@ val prometheusExporter = project.in(file("."))
     bintrayOrganization := Some("evolutiongaming"),
     releaseCrossBuild := true,
     libraryDependencies ++= Seq(
-      prometheusCommonClient, prometheusHotspotClient, simpleClientLogback, Akka.Http, Akka.HttpTestKit) map Dependencies.excludeLog4j,
-    parallelExecution in Test := false,
+      prometheusCommonClient, prometheusHotspotClient, simpleClientLogback, logging,
+      Akka.Http, Akka.HttpTestKit % Test) map Dependencies.excludeLog4j,
     testOptions in Test ++= Seq(
       Tests.Argument(
         TestFrameworks.ScalaTest,

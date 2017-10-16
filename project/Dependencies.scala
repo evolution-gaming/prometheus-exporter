@@ -3,9 +3,13 @@ import sbt._
 object Dependencies {
   private val prometheusVersion = "0.0.26"
 
+  private val scalaLoggingVersion = "3.7.2"
+
   lazy val prometheusCommonClient = "io.prometheus" % "simpleclient_common" % prometheusVersion
   lazy val prometheusHotspotClient = "io.prometheus" % "simpleclient_hotspot" % prometheusVersion
   lazy val simpleClientLogback = "io.prometheus" % "simpleclient_logback" % prometheusVersion
+
+  lazy val logging = "com.typesafe.scala-logging" %% "scala-logging" % scalaLoggingVersion
 
   object Akka {
     private val akkaHttpVersion = "10.0.10"
