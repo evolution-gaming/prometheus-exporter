@@ -23,7 +23,6 @@ val prometheusExporter = project.in(file("."))
       "-Ywarn-numeric-widen",
       "-Xfuture"
     ),
-    crossScalaVersions := Seq("2.12.3", "2.11.11"),
     resolvers += Resolver.bintrayRepo("evolutiongaming", "maven"),
     homepage := Some(new URL("http://github.com/evolution-gaming/akka-tools")),
     startYear := Some(2017),
