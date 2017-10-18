@@ -8,6 +8,8 @@ object Dependencies {
   lazy val prometheusCommonClient = "io.prometheus" % "simpleclient_common" % prometheusVersion
   lazy val prometheusHotspotClient = "io.prometheus" % "simpleclient_hotspot" % prometheusVersion
   lazy val simpleClientLogback = "io.prometheus" % "simpleclient_logback" % prometheusVersion
+  lazy val scalatest = "org.scalatest" %% "scalatest" % "3.0.4"
+  lazy val pegdown = "org.pegdown" % "pegdown" % "1.6.0"
 
   lazy val logging = "com.typesafe.scala-logging" %% "scala-logging" % scalaLoggingVersion
 

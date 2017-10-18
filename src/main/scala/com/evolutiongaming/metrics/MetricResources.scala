@@ -36,5 +36,4 @@ object MetricResources {
 
   implicit val ReportMarshaller: ToEntityMarshaller[Report] =
     byteStringMarshaller(TextReportContentType).compose[Report](r => ByteString(r.text))
-
 }

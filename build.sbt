@@ -33,7 +33,7 @@ val prometheusExporter = project.in(file("."))
     releaseCrossBuild := true,
     libraryDependencies ++= Seq(
       prometheusCommonClient, prometheusHotspotClient, simpleClientLogback, logging,
-      Akka.Http, Akka.HttpTestKit % Test) map Dependencies.excludeLog4j,
+      Akka.Http, Akka.HttpTestKit % Test, scalatest % Test, pegdown % Test) map Dependencies.excludeLog4j,
     testOptions in Test ++= Seq(
       Tests.Argument(
         TestFrameworks.ScalaTest,
