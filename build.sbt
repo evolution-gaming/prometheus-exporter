@@ -8,7 +8,7 @@ val prometheusExporter = project.in(file("."))
       scalaVersion := "2.12.4"
     )),
     name := "prometheus-exporter",
-    licenses := Seq("MIT License" -> url("http://www.opensource.org/licenses/mit-license.html")),
+    licenses := Seq("MIT" -> url("http://www.opensource.org/licenses/mit-license.html")),
     crossScalaVersions := Seq("2.12.4", "2.11.11"),
     scalacOptions in(Compile, doc) ++= Seq("-no-link-warnings"),
     scalacOptions ++= Seq(
