@@ -24,7 +24,7 @@ val prometheusExporter = project.in(file("."))
       "-Xfuture"
     ),
     resolvers += Resolver.bintrayRepo("evolutiongaming", "maven"),
-    homepage := Some(new URL("http://github.com/evolution-gaming/akka-tools")),
+    homepage := Some(new URL("https://github.com/evolution-gaming/prometheus-exporter")),
     startYear := Some(2017),
     organizationName := "Evolution Gaming",
     organizationHomepage := Some(url("http://evolutiongaming.com")),
