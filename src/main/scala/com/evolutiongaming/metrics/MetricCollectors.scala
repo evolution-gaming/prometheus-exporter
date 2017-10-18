@@ -44,6 +44,12 @@ class MetricCollectors {
   def registerCounter(configure: Counter.Builder => Counter.Builder): Counter =
     register(configure(Counter.build()).create)
 
+  def registerGauge(configure: Gauge.Builder => Gauge.Builder): Gauge =
+    register(configure(Gauge.build()).create)
+
+  def registerHistogram(configure: Histogram.Builder => Histogram.Builder): Histogram =
+    register(configure(Histogram.build()).create)
+
   def metricFamilySamples: ju.Enumeration[Collector.MetricFamilySamples] = {
     val combined =
       registry.metricFamilySamples.asScala ++
