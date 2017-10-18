@@ -5,11 +5,11 @@ val prometheusExporter = project.in(file("."))
   .settings(
     inThisBuild(List(
       organization := "com.evolutiongaming",
-      scalaVersion := "2.12.3"
+      scalaVersion := "2.12.4"
     )),
     name := "prometheus-exporter",
     licenses := Seq("MIT License" -> url("http://www.opensource.org/licenses/mit-license.html")),
-    crossScalaVersions := Seq("2.12.3", "2.11.11"),
+    crossScalaVersions := Seq("2.12.4", "2.11.11"),
     scalacOptions in(Compile, doc) ++= Seq("-no-link-warnings"),
     scalacOptions ++= Seq(
       "-encoding", "UTF-8",
