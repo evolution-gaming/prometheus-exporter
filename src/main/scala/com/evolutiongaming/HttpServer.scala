@@ -34,7 +34,7 @@ class HttpServer(routees: Seq[Route], interface: String = "0.0.0.0", port: Int =
     case Success(_) => logger.info(s"HTTP server started on $interface:$port")
     case Failure(e) =>
       logger.error(s"HTTP server failed to start on $interface:$port, terminating", e)
-      system.terminate()                                t
+      system.terminate()
   }
 
   protected def bind(route: Route)(implicit exceptionHandler: ExceptionHandler = ExceptionHandler.default(implicitly)): Future[ServerBinding] =
