@@ -24,12 +24,12 @@ val prometheusExporter = project.in(file("."))
       "-Xfuture"
     ),
     resolvers += Resolver.bintrayRepo("evolutiongaming", "maven"),
+    releaseEarlyEnableLocalReleases := true,
     homepage := Some(new URL("https://github.com/evolution-gaming/prometheus-exporter")),
     startYear := Some(2017),
     organizationName := "Evolution Gaming",
     organizationHomepage := Some(url("http://evolutiongaming.com")),
     bintrayOrganization := Some("evolutiongaming"),
-    releaseCrossBuild := true,
     libraryDependencies ++= Seq(
       prometheusCommonClient, prometheusHotspotClient, simpleClientLogback, logging,
       Akka.Http, Akka.HttpTestKit % Test, scalatest % Test, pegdown % Test) map Dependencies.excludeLog4j,
