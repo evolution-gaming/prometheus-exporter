@@ -9,7 +9,7 @@ It can be injected as a akka.http.scaladsl.server.Route or can be started as a s
 
 ``` sbtshell
  resolvers += Resolver.bintrayRepo("evolutiongaming", "maven") 
- libraryDependencies += "com.evolutiongaming" %% "prometheus-exporter" % "0.0.5" 
+ libraryDependencies += "com.evolutiongaming" %% "prometheus-exporter" % "0.1.0" 
 ```
 
 Configuration for http server can be done via https://doc.akka.io/docs/akka-http/current/scala/http/configuration.html
