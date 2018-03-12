@@ -5,7 +5,10 @@ val prometheusExporter = project.in(file("."))
   .settings(
     inThisBuild(List(
       organization := "com.evolutiongaming",
-      scalaVersion := "2.12.4"
+      scalaVersion := "2.12.4",
+      developers := List(Developer("stas", "Stas", "stass.ua@gmail.com", url("https://www.linkedin.com/in/stas-shevchenko-916b7a16"))),
+      scmInfo := Some(ScmInfo(url("https://github.com/evolution-gaming/prometheus-exporter"), "scm:git:git@github.com:evolution-gaming/prometheus-exporter.git")),
+      releaseEarlyWith := BintrayPublisher,
     )),
     name := "prometheus-exporter",
     licenses := Seq("MIT" -> url("http://www.opensource.org/licenses/mit-license.html")),
